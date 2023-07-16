@@ -1,0 +1,65 @@
+final banglaMonths = [
+  'বৈশাখ',
+  'জ্যৈষ্ঠ',
+  'আষাঢ়',
+  'শ্রাবণ',
+  'ভাদ্র',
+  'আশ্বিন',
+  'কার্তিক',
+  'অগ্রহায়ণ',
+  'পৌষ',
+  'মাঘ',
+  'ফাল্গুন',
+  'চৈত্র'
+];
+
+
+final Map<int, String> banglaWeekDays = {
+  7: "রবিবার",
+  1: "সোমবার",
+  2: "মঙ্গলবার",
+  3: "বুধবার",
+  4: "বৃহস্পতিবার",
+  5: "শুক্রবার",
+  6: "শনিবার"
+};
+final Map<int, String> englishWeekDays = {
+  7: 'Sunday',
+  1: 'Monday',
+  2: 'Tuesday',
+  3: 'Wednesday',
+  4: 'Thursday',
+  5: 'Friday',
+  6: 'Saturday',
+};
+final Map<String, String> short_brangla_week_name = {
+  "Sat": "শনি",
+  "Sun": "রবি",
+  "Mon": "সোম",
+  "Tue": "মঙ্গল",
+  "Wed": "বুধ",
+  "Thu": "বৃহ:",
+  "Fri": "শুক্র",
+};
+
+final banglaSeasons = ['গ্রীষ্ম', 'বর্ষা', 'শরৎ', 'হেমন্ত', 'শীত', 'বসন্ত'];
+
+final totalDaysInMonthOld = [31, 31, 31, 31, 31, 30, 30, 30, 30, 30, 30, 30];
+final totalDaysInMonthNew = [31, 31, 31, 31, 31, 31, 30, 30, 30, 30, 30, 30];
+
+bool isLeapYear(int year) =>
+    ((year % 4 == 0) && (year % 100 != 0)) || (year % 400 == 0);
+
+String translateNumbersToBangla(String number) {
+  number = number.replaceAll("0", "০");
+  number = number.replaceAll("1", "১");
+  number = number.replaceAll("2", "২");
+  number = number.replaceAll("3", "৩");
+  number = number.replaceAll("4", "৪");
+  number = number.replaceAll("5", "৫");
+  number = number.replaceAll("6", "৬");
+  number = number.replaceAll("7", "৭");
+  number = number.replaceAll("8", "৮");
+  number = number.replaceAll("9", "৯");
+  return number;
+}
